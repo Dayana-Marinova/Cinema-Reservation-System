@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block contentroom %}
+  <div id="roomslist">
+    {% for room in rooms %}
+    <p><a href="/room/{{ room.number }}/">{{ room.number }}</a></p>
+    {% endfor %}
+  </div>
+{% endblock %}
