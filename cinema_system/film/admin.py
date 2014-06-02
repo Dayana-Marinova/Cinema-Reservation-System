@@ -10,5 +10,6 @@ class FilmAdmin(admin.ModelAdmin):
         'category',
         'typeOfFilm',
     ]
+    search_fields = ['title']
 
 admin.site.register(Film, FilmAdmin)
