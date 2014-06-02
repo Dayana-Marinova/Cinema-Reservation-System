@@ -12,6 +12,7 @@ class Film(models.Model):
     subtitles = models.BooleanField(default=False)
     age = models.PositiveIntegerField(default=0)
     typeOfFilm = models.CharField(blank=False, max_length=10)
+    image = models.ImageField(upload_to='images/filmthumbs/')
 
     def __unicode__(self):
         return self.title
