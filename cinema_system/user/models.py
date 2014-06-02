@@ -1,10 +1,9 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 
 
-class User(User):
+class User(AbstractUser):
     USERNAME_FIELD = 'username'
-    #user = models.ForeignKey(User, unique=True, related_name='profile')
     count_of_films = models.PositiveIntegerField(default=0)
     count_of_comments = models.PositiveIntegerField(default=0)
 
