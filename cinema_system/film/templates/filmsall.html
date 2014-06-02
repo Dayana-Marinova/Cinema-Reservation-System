@@ -2,7 +2,7 @@
 {% block content %}
   <div id="filmslist">
     {% for film in films %}
-    <p><a href="/films/{{ film.title }}/">{{ film.title }}</a></p>
+    <p><a href="/films/{{ film.title }}/"><img src="film.image.url"/>{{ film.title }}</a></p>
     {% endfor %}
   </div>
 {% endblock %}
