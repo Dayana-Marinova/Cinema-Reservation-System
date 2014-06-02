@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <div id="singlefilm">
+    <p>Name: {{ film }} </p>
+    <p>Description: {{ film.description }}</p>
+    <p>Category: {{ film.category  }}</p>
+    <p>Rating: {{ film.rating }}</p>
+    <p>Price ot the ticket: {{ film.priceOfTicket }}</p>
+    <p>Time: {{ film.time }}</p>
+    <p>Type of Film: {{ film.typeOfFilm }}</p>
+    <p>Age: {{ film.age }}</p>
+    <p>Subtitles: {{ film.subtitels }}</p>
+    <p>Language: {{ film.language }}</p>
+  </div>
+{% endblock %}
