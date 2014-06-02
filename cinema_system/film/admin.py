@@ -6,9 +6,9 @@ class FilmAdmin(admin.ModelAdmin):
     list_display = [
         'id',
         'title',
-        'priceOfTheThicket',
+        'price_of_the_thicket',
         'category',
-        'typeOfFilm',
+        'type_of_film',
     ]
     search_fields = ['title']
 

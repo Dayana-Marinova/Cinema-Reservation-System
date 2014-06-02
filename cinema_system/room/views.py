@@ -12,3 +12,4 @@ def InformationRoom(request, roomnumber):
     room = Room.objects.get(number=roomnumber)
 
     return render(request, "singleroom.html", locals())
+    
