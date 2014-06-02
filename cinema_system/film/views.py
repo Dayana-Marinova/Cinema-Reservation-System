@@ -11,4 +11,4 @@ def FilmAll(request):
 def DescriptionFilm(request, filmtitle):
     film = Film.objects.get(title=filmtitle)
 
-    return render(request, "singlefilm.thml", locals())
+    return render(request, "singlefilm.html", locals())
