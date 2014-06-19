@@ -13,11 +13,13 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'd6_1#%7zj6x1s-uv@#3m-51tt6(#-yuhow_^*g-sm!)tznwjrf'
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'd6_1#%7zj6x1s-uv@#3m-51tt6(#-yuhow_^*g-sm!)tznwjrf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -55,7 +57,6 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'cinema_system.urls'
 
 WSGI_APPLICATION = 'cinema_system.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
