@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'seat',
     'room',
     'user',
+    'signUp',
 )
 
 MIDDLEWARE_CLASSES = (
