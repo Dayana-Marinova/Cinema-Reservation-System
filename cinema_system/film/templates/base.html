@@ -29,21 +29,37 @@
             <div class="inner">
               <h3 class="masthead-brand">Cover</h3>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Films</a></li>
+                <li><a href="{% url "home" %}">Home</a></li>
+                <li><a href="{% url "films" %}">Films</a></li>
                 <li><a href="#">Catalog</a></li>
                 <li><a href="#">Program</a></li>
+                <li><a href="{% url "signUp" %}"><button type="submit" class="btn btn-success">Sign in</button></a></li>
+                <li><a href="{% url "register" %}"><button type="submit" class="btn btn-success">Register</button></a></li></li>
               </ul>
             </div>
           </div>
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Cinema reservation system</h1>
-            <p class="lead">Welcome to the purfect cinema reservation system. Enjoi!</p>
-            <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>
+          <div class='container'>
+          	{% if messages %}
+          	<div class='row'>
+          		<div class='col-xs-12'>
+          			<ul class='messages'>
+          			{% for message in messages %}
+          				<p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+          			{% endfor %}
+          			</ul>
+          		</div>
+          	</div>
+          	{% endif %}
           </div>
+          {% block homeContent %}
+          {% endblock %}
+          {% block filmsContent %}
+          {% endblock %}
+          {% block signUpContent %}
+          {% endblock %}
+          {% block registerContent %}
+          {% endblock %}
 
         </div>
 

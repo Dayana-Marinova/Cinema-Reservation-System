@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block content %}
+{% block filmsContent %}
   <div id="filmslist">
     {% for film in films %}
     <p><a href="/films/{{ film.title }}/"><img src="film.image.url"/>{{ film.title }}</a></p>

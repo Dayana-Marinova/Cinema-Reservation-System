@@ -12,3 +12,7 @@ def DescriptionFilm(request, filmtitle):
     film = Film.objects.get(title=filmtitle)
 
     return render(request, "singlefilm.html", locals())
+
+
+def home(request):
+    return render(request, "home.html", locals())
