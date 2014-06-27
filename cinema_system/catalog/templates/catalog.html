@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block catalogContent %}
+<form method="POST">
+	{{ form }}
+	{% csrf_token %}
+	<button>Search</button>
+</form>
+
+	{% for film in films %}
+		{{film}} <br>
+	{% endfor %}
+{% endblock %}
