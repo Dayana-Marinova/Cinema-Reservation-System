@@ -7,5 +7,5 @@ class Seat(models.Model):
     number = models.PositiveIntegerField(default=0)
     taken = models.BooleanField(default=False)
 
-    def __unicode__(self):
-        return self.number
+    def __str__(self):
+        return str(self.number)
