@@ -5,13 +5,16 @@ from django.views.generic import TemplateView
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'cinema_system.views.home', name='home'),
+    url(r'^home/$', 'film.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-    (r'^films/$', 'film.views.FilmAll'),
+    url(r'^films/$', 'film.views.FilmAll', name='films'),
     url(r'^admin/', include(admin.site.urls)),
-    (r'^rooms/$', 'room.views.RoomAll'),
-    (r'^films/(?P<filmtitle>.*)/$', 'film.views.DescriptionFilm'),
+    url(r'^rooms/$', 'room.views.RoomAll', name='allRooms'),
+    url(r'^films/(?P<filmtitle>.*)/$', 'film.views.DescriptionFilm'),
     (r'^$', TemplateView.as_view(template_name="base.html")),
-    (r'^room/(?P<roomnumber>.*)/$', 'room.views.InformationRoom'),
-    (r'^register/$', 'user.views.UserRegiteration'),
+    url(r'^room/(?P<roomnumber>.*)/$', 'room.views.InformationRoom'),
+    url(r'^user/$', 'user.views.UserRegiteration', name='register'),
+    #url(r'^thankYouRegister/$', 'user.views.thankYouRegister', name='thankYouRegister'),
+    url(r'^signUp/$', 'signUp.views.home', name='signUp'),
+    url(r'^thankYou/$', 'signUp.views.thankYou', name='thankYou'),
 )
