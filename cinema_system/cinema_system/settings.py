@@ -16,6 +16,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'd6_1#%7zj6x1s-uv@#3m-51tt6(#-yuhow_^*g-sm!)tznwjrf'
 
+#for gmail
+EMAIL_USE_TLS = True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
@@ -42,8 +44,7 @@ INSTALLED_APPS = (
     'seat',
     'room',
     'user',
-    'signUp',
-    'program',
+    'catalog',
 )
 
 MIDDLEWARE_CLASSES = (
