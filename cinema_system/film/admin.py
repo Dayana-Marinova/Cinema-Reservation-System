@@ -1,5 +1,5 @@
 from django.contrib import admin
-from film.models import Film
+from film.models import Film, Reservation
 
 
 class FilmAdmin(admin.ModelAdmin):
@@ -13,3 +13,13 @@ class FilmAdmin(admin.ModelAdmin):
     search_fields = ['title']
 
 admin.site.register(Film, FilmAdmin)
+
+
+class ReservationAdmin(admin.ModelAdmin):
+    list_display = [
+        'id',
+        'user',
+        'film',
+    ]
+
+admin.site.register(Reservation, ReservationAdmin)

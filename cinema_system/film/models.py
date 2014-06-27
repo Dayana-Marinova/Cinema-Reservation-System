@@ -1,5 +1,6 @@
 from django.db import models
-
+from user.models import User
+from seat.models import Seat
 
 class Film(models.Model):
     title = models.CharField(blank=False, max_length=100)
@@ -13,5 +14,10 @@ class Film(models.Model):
     age = models.PositiveIntegerField(default=0)
     type_of_film = models.CharField(blank=False, max_length=10)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
+
+
+class Reservation(models.Model):
+    user = models.ForeignKey(User)
+    film = models.ForeignKey(Film)

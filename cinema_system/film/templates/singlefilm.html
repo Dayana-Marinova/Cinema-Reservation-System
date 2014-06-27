@@ -12,4 +12,14 @@
     <p>Subtitles: {{ film.subtitels }}</p>
     <p>Language: {{ film.language }}</p>
   </div>
+
+  {% if user.is_authenticated %}
+  <form method='POST'>
+        {{form}}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Reservation</button>
+  </form>
+  {% else %}
+    <p>Log in to make reservation!</p>
+  {% endif %}
 {% endblock %}
