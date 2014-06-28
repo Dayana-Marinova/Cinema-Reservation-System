@@ -16,5 +16,6 @@ urlpatterns = patterns('',
     url(r'^user/$', 'user.views.userRegiteration', name='register'),
     url(r'^thankYouRegister/$', 'user.views.thankYouRegister', name='thankYouRegister'),
     url(r'^catalog/$', 'catalog.views.catalogAll', name='catalog'),
-    url(r'^thankYouReservation/$', 'film.views.descriptionFilm')
+    url(r'^thankYouReservation/(?P<filmtitle>.*)/$', 'film.views.descriptionFilm'),
+    url(r'^program/$', 'film.views.program', name='program')
 )
