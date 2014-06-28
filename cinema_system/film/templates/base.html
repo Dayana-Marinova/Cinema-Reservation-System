@@ -32,7 +32,7 @@
                 <li><a href="{% url "home" %}">Home</a></li>
                 <li><a href="{% url "films" %}">Films</a></li>
                 <li><a href="{% url "catalog" %}">Catalog</a></li>
-                <li><a href="#">Program</a></li>
+                <li><a href="{% url "program" %}">Program</a></li>
                 <li><a href="{% url "register" %}"><button type="submit" class="btn btn-success">Register</button></a></li></li>
               </ul>
             </div>
@@ -64,6 +64,8 @@
           {% block thankYouRegisterContent %}
           {% endblock %}
           {% block thankYouReservationContent %}
+          {% endblock %}
+          {% block tableContent %}
           {% endblock %}
 
         </div>

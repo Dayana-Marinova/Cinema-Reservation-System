@@ -24,3 +24,7 @@ def descriptionFilm(request, filmtitle):
 
 def home(request):
     return render(request, "home.html", locals())
+
+
+def program(request):
+    return render(request, 'table.html', locals())
